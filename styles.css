@@ -1,0 +1,336 @@
+/********** RESET Y VARIABLES **********/
+:root {
+    --color-primary: #7c4a1e;
+    --color-secondary: #b4845c;
+    --color-accent: #e2c9a0;
+    --color-bg: #f5e6d3;
+    --color-bg-dark: #4e2e13;
+    --color-light: #fff8f0;
+    --color-text: #3a2a18;
+    --color-card: #f5e6d3;
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Montserrat', sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: var(--font-secondary);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/********** TOPBAR **********/
+.topbar {
+    background: var(--color-bg-dark);
+    color: var(--color-accent);
+    font-size: 0.95rem;
+    padding: 0.4rem 0;
+}
+.topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topbar-social a {
+    color: var(--color-accent);
+    margin-left: 0.7rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+/********** HEADER Y NAV **********/
+.header.main-header {
+    background: var(--color-light);
+    box-shadow: 0 2px 8px rgba(60, 30, 10, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 0;
+}
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.1rem;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+}
+.main-nav ul {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+}
+.main-nav a {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+.main-nav a:hover {
+    background: var(--color-accent);
+    color: var(--color-bg-dark);
+}
+
+/********** HERO **********/
+.hero-structured {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg);
+}
+.hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(rgba(80, 50, 20, 0.5), rgba(80, 50, 20, 0.5)),
+        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+.hero-content-structured {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    max-width: 600px;
+    padding: 3.5rem 2rem;
+    background: rgba(255, 248, 240, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60, 30, 10, 0.13);
+}
+.hero-content-structured h1 {
+    font-family: var(--font-primary);
+    font-size: 2.8rem;
+    color: var(--color-primary);
+    margin-bottom: 1.2rem;
+}
+.hero-content-structured p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/********** BOTONES **********/
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(60, 30, 10, 0.08);
+}
+.btn-primary {
+    background: var(--color-secondary);
+    color: var(--color-light);
+}
+.btn-primary:hover {
+    background: var(--color-primary);
+    color: var(--color-accent);
+}
+.btn-secondary {
+    background: var(--color-accent);
+    color: var(--color-primary);
+}
+.btn-secondary:hover {
+    background: var(--color-secondary);
+    color: var(--color-light);
+}
+
+/********** PROMO CIRCULAR Y DESTACADOS **********/
+.promo-circle-section {
+    background: var(--color-light);
+    padding: 3rem 0 2rem 0;
+}
+.promo-circle-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.promo-circle {
+    background: var(--color-primary);
+    color: var(--color-accent);
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-family: var(--font-primary);
+    box-shadow: 0 4px 16px rgba(60, 30, 10, 0.13);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.promo-circle small {
+    font-size: 1rem;
+    color: var(--color-bg);
+}
+.promo-featured h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.7rem;
+}
+.promo-featured p {
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+/********** PRODUCTOS DESTACADOS **********/
+.featured-drinks-section {
+    background: var(--color-bg);
+    padding: 3rem 0 2rem 0;
+}
+.drinks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+.drink-card {
+    background: var(--color-card);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(60, 30, 10, 0.13);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+.drink-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(60, 30, 10, 0.18);
+}
+.drink-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--color-accent);
+}
+.drink-card h3 {
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin: 1.2rem 0 0.5rem 0;
+}
+.drink-card p {
+    color: var(--color-text);
+    font-size: 1rem;
+    margin: 0 1rem 1.2rem 1rem;
+}
+
+/********** BANNER PROMO **********/
+.banner-promo-section {
+    background: var(--color-secondary);
+    color: var(--color-light);
+    padding: 2rem 0 2rem 0;
+    text-align: center;
+}
+.banner-promo-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.banner-promo-text span {
+    font-size: 1.2rem;
+    font-family: var(--font-primary);
+    color: var(--color-light);
+}
+
+/********** GALERÍA **********/
+.gallery-section {
+    background: var(--color-light);
+    padding: 2.5rem 0 2rem 0;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(60, 30, 10, 0.10);
+}
+
+/********** FOOTER **********/
+.footer-structured {
+    background: var(--color-bg-dark);
+    color: var(--color-accent);
+    padding: 3rem 0 1rem 0;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+.footer-structured h4 {
+    font-family: var(--font-primary);
+    color: var(--color-accent);
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+}
+.footer-bottom {
+    text-align: center;
+    color: var(--color-accent);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-top: 1px solid #a67c52;
+    padding-top: 1rem;
+}
+
+/********** RESPONSIVE **********/
+@media (max-width: 900px) {
+    .promo-circle-container, .banner-promo-content, .topbar-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.2rem;
+    }
+    .nav-container {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
+@media (max-width: 600px) {
+    .hero-content-structured h1 {
+        font-size: 1.5rem;
+    }
+    .promo-featured h2, .footer-structured h4 {
+        font-size: 1rem;
+    }
+    .drink-card img, .gallery-grid img {
+        height: 110px;
+    }
+    .promo-circle {
+        width: 120px;
+        height: 120px;
+        font-size: 1rem;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
