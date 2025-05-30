@@ -106,7 +106,9 @@ body {
     text-align: left;
     max-width: 600px;
     padding: 3.5rem 2rem;
-    background: rgba(255, 248, 240, 0.92);
+    background: rgba(255, 255, 255, 0.578);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 18px;
     box-shadow: 0 8px 32px rgba(60, 30, 10, 0.13);
 }
